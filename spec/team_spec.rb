@@ -4,17 +4,17 @@ require './lib/team'
 
 describe Team do
 
+  before(:each) do
+    @team = Team.new('France')
+  end
+
   describe '#initialize' do
     it 'creates an instance object for class Team' do
-      team = Team.new('France')
-
-      expect(team).to be_an_instance_of(Team)
+      expect(@team).to be_an_instance_of(Team)
     end
 
     it 'to have readable attributes' do
-      team = Team.new('France')
-
-      expect(team.country).to eq('France')
+      expect(@team.country).to eq('France')
     end
   end
 
