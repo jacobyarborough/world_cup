@@ -5,7 +5,7 @@ describe Player do
 
   describe '#initialize' do
     it 'creates an instance object from clas Player' do
-      player = Player.new
+      player = Player.new({name: "Luca Modric", position: "midfielder"})
 
       expect(player).to be_an_instance_of(Player)
     end
